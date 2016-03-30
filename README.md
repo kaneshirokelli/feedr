@@ -10,6 +10,6 @@ Welcome to JavaScript
 
 | Class | Title |
 | :--- | :--- | 
-| Lesson 0 | [Installfest](/classes/00-installfest/readme.md)
-| Lesson 1 | [JS on the Command Line](/classes/01-command-line-JS/readme.md)
+| Lesson 0 | [Installfest](./classes/00-installfest/readme.md)
+| Lesson 1 | [JS on the Command Line](./classes/01-command-line-JS/readme.md)
 
