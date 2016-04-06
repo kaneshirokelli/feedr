@@ -11,5 +11,7 @@ Welcome to JavaScript
 | Class | Title |
 | :--- | :--- | 
 | Lesson 0 | [Installfest](./Classes/00-installfest/readme.md)
-| Lesson 1 | [JS on the Command Line](./Classes/00-installfest/readme.md)
+| Lesson 1 | [JS on the Command Line](./Classes/01-command-line-JS/readme.md)
+| Lesson 2 | [Data Types](./Classes/02-data-types/readme.md)
+| Lesson 3 | [Collections and Loops](./Classes/03-collections-and-loops/readme.md)
 
