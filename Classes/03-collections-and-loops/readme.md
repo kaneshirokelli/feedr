@@ -712,7 +712,7 @@ Make sure the lesson objectives have been met.
 ### Before Next Class
 |   |   |
 |---|---|
-| **UPCOMING PROJECTS**  | [Project 1: Slackbot](../../projects/unit1) |
+| **UPCOMING PROJECTS**  | [Project 1: Slackbot](../../Projects/unit1) |
 
 #### Further Resources
 - [Control Flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
