@@ -20,3 +20,7 @@ var btnDrive = document.getElementById('CanIDrive');
 btnDrive.addEventListener('click',canIDrive);
 
 
+function fizzbuzz(){
+    
+    console.log('FizzBuzz');
+}
