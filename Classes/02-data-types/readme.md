@@ -58,8 +58,6 @@ We'll elaborate all these- except Booleans, Arrays and Objects (for now) - and t
 
 JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements...client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
 
->Note: This would be a good place to show students examples of browser based JavaScript applications. You can pull up the <a href="http://www.generalassemb.ly">General Assembly</a> website and take them to the interest form section. Pull up the source code to show students how client-side JavaScript works.
-
 *Citation: [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction)*
 
 ---
@@ -85,11 +83,7 @@ The computer knows what type of data we're working with, so why don't we ask it?
   ```
   `typeof()` returns a string with the type of the operand, or expression of the object you're looking at.
 
-  >Note: At this point we haven't explained exactly what objects are. Give a brief overview of objects as a  collections of properties, and a property as an association between a key and a value. Objects in JavaScript are used in two ways:
-    >1. As simple structured data store, similar to arrays, the main difference being that instead of accessing our values by index, we access them by a key.
-    >2. As a fundamental programming paradigm that helps us structure and categorize our code.
-  >More about objects in the second half of this class!
-
+  
 #### Part 2: Numbers
 
 Numbers are divided into two classes or objects:
@@ -418,8 +412,6 @@ goods[2] = "beer"
 quantity.push(8)
 ```
 
->Note to the students the differences in adding (or setting) array values. What are the pros/cons of each approach?
-
 #### Part 3: Accessing elements from arrays and concatenating them with strings
 
 Now it's time to access various combinations of the two array's elements and concatenate their returned values.
@@ -434,8 +426,6 @@ Now it's time to access various combinations of the two array's elements and con
 ## Array Helper Methods (25 min)
 
 Arrays come with a number of methods. Here's a list of some popular helpers:
-
-> Note: You might want to demonstrate a few of these.
 
 - `a.toString()` - Returns a string with the `toString()` of each element separated by commas.
 
@@ -673,8 +663,6 @@ In the [starter code](starter-code/array.js) you'll find an array.js file that w
 ---
 <a name="lab2"></a>
 ## Homework: Madlibs (10 min)
-
-> **Note:** The Madlibs homework exercise requires the use of more advanced techniques like functions and DOM manipulation. In this class, you should walk students through the starter code and explain the goals of the exercise **but let them know that they will not yet have the skills to complete it**. The due date for the exercise should be set for some point after lesson 4 (Functions and Scope). The idea is to give students a preview of what the first assignment will entail--if students would like to read up on more advanced topics and give the exercise a shot before lesson 4, they should feel free to do so.
 
 For this assignment, you'll create your own Startup Generator app. Open the files in the [madlib with loops folder](starter-code/). You'll learn how to use helper methods and for loops. We've given you some starter code; while we haven't covered functions and DOM manipulation yet, this is a good chance for you to challenge yourself and get a head start on these topics, if you like.
 
