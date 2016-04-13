@@ -385,7 +385,7 @@ Make sure the lesson objectives have been met.
 ### Before Next Class
 |   |   |
 |---|---|
-| **UPCOMING PROJECTS**  | [Project 1: Slackbot](../../projects/unit1/project-01.md) |
+| **UPCOMING PROJECTS**  | [Project 1: Slackbot](../../Projects/unit1/project-01.md) |
 
 ---
 <a name="lab2"></a>
