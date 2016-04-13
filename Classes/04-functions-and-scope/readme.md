@@ -2,16 +2,17 @@
 
 | Timing | Type | Topic |
 | --- | --- | --- |
-| 10 min | [Opening](opening) | Introduction to Functions  |
+| 10 min | [Opening](#opening) | Introduction to Functions  |
 | 20 min | [Codealong](#codealong1) | Function Declaration |
 | 30 min | [Lab](#lab1) | Rolling Dice |
 | 15 min | [Codealong](#codealong2) | Parameters |
 | 15 min | [Codealong](#codealong3) |  The Return Statement |
-| 10 min | [Introduction](introduction1) | Introduction to Scope |
+| 10 min | [Introduction](#introduction1) | Introduction to Scope |
 | 15 min | [Codealong](#codealong4) | Local and Global Scope Usage |
-| 15 min | [Lab](#lab3) | Hubot: Independent Practice + Bonus |
+| 60 min | [Lab](#lab3) | Hubot: Independent Practice |
 | 5 min | [Conclusion](#conclusion) | Final Questions & Exit Tickets |
 | 45 min | [Bonus Labs](#lab2) | Currency Converters |
+
 
 ### Objectives
 
@@ -68,7 +69,7 @@ While both methods are similar, an important difference between function declara
 speak('hello, world!')
 
 function speak(words) {
-  console.log('words')
+  console.log(words)
 }
 
 // DOES NOT RESULT IN ERROR
@@ -80,7 +81,7 @@ Function expressions, however, must be defined before they are called:
 speak('hello, world!')
 
 var speak = function (words) {
-  console.log('words')
+  console.log(words)
 }
 
 // RESULTS IN ERROR:
@@ -140,7 +141,7 @@ For this lab, you'll be creating a page where every time the user hits the "Roll
 
 Before writing any code, make sure to write down the pseudocode for the exercise!
 
->Note: Get familiar with: [document.getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) to complete this exercise. 
+>Note: We haven't covered DOM Manipulation yet, but students will need to get some familiarity with [document.getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) to complete this exercise. Make sure to either hint at this or give them a short intro.
 
 <a name="codealong2"></a>
 ## Parameters (15 min)
@@ -158,7 +159,7 @@ function helloObama () {
 }
 ```
 
-> Why is this bad?
+> __Instructor's Note:__ Ask students as to why writing such specific functions is a bad idea. If there are no immediate answers, ask what happens to the above program structure if there are 1,000 users. If we have to write 1,000 different functions, is this a scalable and maintainable program?
 
 Parameters remedy this problem by allowing us to call, or invoke, the same function with different values:
 
@@ -252,7 +253,7 @@ function speak (words) {
 By default, JavaScript functions will return an `undefined` value. To test this, define and run a function __without__ a return value using Node. When writing a function using a `return` value, you are "overwriting" this default value.
 
 ---
-<a name="introduction"></a>
+<a name="introduction1"></a>
 
 ## Introduction to Scope (15 min)
 
@@ -271,7 +272,7 @@ var name = 'Gerry';
 
 Global scope can be really confusing when you run into namespace clashes. You won't want to use global scoping for all your variables, as using global scope the right way is quite complex, but every Javascript program uses the global scope in one way or another.
 
-> Note: Here is some information about namespacing in JavaScript [namespace](http://www.codeproject.com/Articles/829254/JavaScript-Namespace) means in JavaScript.
+> Note: If time permits, instructors may want to briefly go over what [namespace](http://www.codeproject.com/Articles/829254/JavaScript-Namespace) means in JavaScript.
 
 #### Local scope
 
@@ -338,35 +339,276 @@ getScore();
 ```
 ---
 <a name="lab3"></a>
-## Hubot: Independent Practice + Bonus (30 mins)
+## Hubot: Independent Practice (60 mins)
+
+>Note: The following lab is very challenging and will likely require a good deal of troubleshooting. Provide the students with the below set of instructions and have them work in groups of 2-3, with each group having its own Hubot and Slack API token. Before class, you'll want to configure multiple Hubot integrations for the class (the maximum number of Hubots per Slack organization is 10); [Click here](https://my.slack.com/services/new/hubot) to configure a new Hubot.  Once each Hubot has been configured, edit its configuration in order to access its API token. **It's important to configure enough Hubots and API tokens prior to class, as Slack starts refusing connections when more than around 5 users attempt to use the same API token simultaneously.** Before starting the lab, the instructor should provide a brief introduction, defining the terms below and outlining the goals of the lab. Students should then follow the instructions to install all the necessary utilities and work through each of the examples, trying to get each to run in the class Slack room. The instructional team should walk around the room and help troubleshoot and offer pointers. **This can be a logistically complex lab, so be sure to give this all a try yourself prior to class.**  
+
+For our unit 1 project, we'll be building our own Slackbot. To get you familiar with bots, we're going to test out something called Hubot in the command line. The Hubot is a "ChatOps" framework that can follow any script written in JavaScript to perform various tasks, from configuring new servers to updating code on Github.
+
+### What Are We About to do?
+
+First off, let's define some terms we'll be using over the course of this lab.
+
+**Slackbot:** You've probably seen automated "bots" on other platforms like Twitter--a bot is essentially a script that is programmed to interact with users as if it's a person. In this lab, we'll begin creating our own bots for use in the class Slack room!
+
+**Hubot:** [Hubot](https://hubot.github.com/) is a framework built by GitHub to help speed up the process of developing SlackBots. It's built using Node.js and something called CoffeeScript and includes a bunch of built-in functionality for performing common bot tasks (posting images, etc.). We'll be leveraging Hubot to help turbocharge the Slackbots we build.
+
+**CoffeeScript:** CoffeeScript is a variant of JavaScript that was designed to make JavaScript more readable and faster to type. CoffeeScript is designed for humans, not computers--at the end of the day, it gets translated into regular JavaScript so that your machine can run it. CoffeeScript is often used in conjunction with Hubot; you won't need to know how to write CoffeeScript for the purposes of this class but know that you will likely encounter it when looking at Hubot examples and documentation. If you encounter a CoffeeScript file (say, the "example.coffee" file that's included with Hubot) and want to better understand what it's doing, you can use a CoffeeScript convertor like [JS2Coffee](http://js2.coffee/) to translate it into vanilla JavaScript.
+
+**Heroku**: Heroku is a platform for hosting and running apps in the cloud. We'll be using Heroku to host the code for our Slackbot, so that it can run independently of our machines.
+
+**Yeoman:** Yeoman is a set of tools that provide a scaffolding for getting web apps up and running quickly. We'll mostly be using a Yeoman tool called yo, which takes care of things like dependencies, build tasks and configuration for you.
 
 
-For our unit 1 project, we'll be building our own Slackbot. To get you familiar with bots, we're going to test out the HUBOT in the command line. The Hubot is a "ChatOps" that can perform any script written in either JavaScript or CoffeeScript to perform various tasks, from configuring new servers to updating code on Github.
+### Installing and Configuring Everything
 
-#### Install HUBOT
+There's a lot that we'll need to install in order to get our bots up and running, so make sure you follow these steps carefully and in order. Your instructor should provide you with a Slackbot and token--make sure you've got those ready, as you'll need both in order to complete many of these steps.
 
-For this lab, we'll set up Hubot locally by installing the necessary files. Follow the instructions here:
+First, you'll need to [sign up for a free Heroku account](http://heroku.com).
 
- * `$ npm install -g yo hubot generator-hubot`
- * `mkdir mybot`
- * `cd mybot`
- * `yo hubot`
+Next, [download the Heroku toolbelt](https://toolbelt.heroku.com/). This is a set of tools that will allow us to talk to Heroku's servers using the command line.
 
- This will prompt you to answer a few questions about your bot.
+Speaking of which, it's now time to fire up the command line. In a terminal window, type the following commands, in order:
+
+**Create your slackbot directory:**
+
+`$ mkdir myslackbot`
+
+**Move into that new directory:**
+
+`$ cd myslackbot`
+
+**Install Hubot and all of its dependencies (CoffeeScript, Yeoman, and the Hubot generator):**
+
+`$ npm install -g hubot coffee-script yo generator-hubot`
+
+**Using Yeoman, generate a Hubot bot:**
+
+`$ yo hubot`
+
+**This will prompt you to answer a few questions about your bot:**
 
  * Owner: `hit enter`
  * Bot Name: `Give the bot a name`
  * Description: `Optional Description`
- * Bot Adapter: `slack` _This step is very important!_
- * `npm install hubot-slack --save`
+ * Bot Adapter: `slack` _Make sure you don't skip this step!_
 
- Test your bot locally:
+**Install hubot-slack dependency and save it to your package JSON:**
 
- `HUBOT_SLACK_TOKEN=TOKEN-GOES-HERE ./bin/hubot --adapter slack`
+`npm install hubot-slack --save`
 
- To create a Slackbot you will add a JavaScript file inside of the `scripts` folder. You can add multiple scripts files to that folder and all will execute when the Slackbot is run.
+Now, we'll need to push up our bot to Heroku.
 
- The example.coffee file is a good file to look at for inspiration. This is a CoffeeScript file so you will need to use a CoffeeScript to JS converter like [JS2Coffee](http://js2.coffee/) to see the expected format.
+**Initialize your local repository:**
+
+`$ git init`
+
+**Add all of your new files:**
+
+`$ git add .`
+
+**Commit your new files:**
+
+`$ git commit -m "Initial Commit"`
+
+**Create a new app on Heroku:**
+
+`$ heroku login`
+
+`$ heroku create myslackbotapp`
+
+ **Connect your local repo to heroku**
+
+ `$ git remote add heroku https://git.heroku.com/myslackbotapp`
+
+**Add the following configs for Slack:**
+
+`$ heroku config:add HEROKU_URL=https://myslackbotapp.herokuapp.com`
+
+`$ heroku config:add HUBOT_SLACK_TOKEN=YourTokenGoesHere`
+
+**Push all your code up to Heroku**
+
+`$ git push heroku master`
+
+**Turn on your bot**
+
+`$ heroku ps:scale web:1`
+
+**Test your bot locally to make sure it's working:**
+
+`HUBOT_SLACK_TOKEN=TOKEN-GOES-HERE ./bin/hubot --adapter slack`
+
+Cool! Now we have our very own Slackbot that's willing and able to do our bidding. But what can it do? Next, we'll take our Slackbot for a test drive.
+
+### Interacting with Your Hubot
+
+To create instructions for your Slackbot, you will add a JavaScript file inside of the `scripts` folder. You can add multiple scripts files to that folder and all will execute when the Slackbot is run. Let's look at a few commands that we might want to use to build our Slackbot scripts.
+
+#### Listening
+
+**.hear**
+
+ The `.hear` command listens for a specific phrase anywhere in the Slack room. You don't have to mention your Slackbot in order to get a response.
+
+ In the below example, anytime the bot hears "Hello!", it will say, "Hi there!":
+
+ ```js
+ bot.hear(/Hello!/, function(res) {
+   return res.send("Hi there!");
+ });
+ ```
+
+ ```
+ tim: Hello!
+ hubot: Hi there!
+ ```
+
+**.respond**
+
+ `.respond` is very similar to `.hear`, expect it will only be triggered when someone specifically mentions the Slackbot using `@`, or sends a direct message.
+
+ ```javascript
+ bot.respond(/What's your favorite food?/, function(res) {
+   return res.send("I'm a robot--I don't eat food!");
+ });
+ ```
+
+ ```
+ tim: @hubot What's your favorite food?
+ hubot: I'm a robot--I don't eat food!
+ jon: What's your favorite food?
+ ... [no response because Jon didn't tag Hubot in his message]
+ ```
+
+#### Speaking Responding to User Input
+
+**.send and .reply**
+
+The "send" method allows your Slackbot to send a message to the channel, while the "reply" method allows it to respond directly to a user with an @ reply. In order to understand the difference, we'll need to accept some user input, so let's take a look at the example below.
+
+**The wildcard selector**
+
+ Would you like to accept user input in your script? Take a look at the example below:
+
+ ```js
+ bot.respond(/Hi Hubot! My name is (.*)/i, function(msg) {
+   var name;
+   name = msg.match[0];
+   if (name == "Hubot") ){
+     return msg.send("You're not Hubot--I'm Hubot!");
+   } else {
+     return msg.reply("Nice to meet you, " + name + "!");
+   }
+
+ });
+ ```
+ ```
+ tim: @hubot Hi Hubot! My name is Tim
+ hubot: @tim Nice to meet you, Tim!  
+ tim: @hubot Hi Hubot! My name is Hubot
+ hubot: You're not Hubot--I'm Hubot!
+ ```
+
+Did you notice the difference between `.send` and `.reply`?
+
+Now, let's dig into how the user input part works. As you can see, we're using `.respond` to set the bot up to listen for its @ handle. Here, it's listening for the phrase `@hubot Hi Hubot! My name is _____`. The `(.*)` syntax is a wildcard value that effectively represents the "blank" in that sentence. When the bot is triggered with the phrase, `@hubot Hi Hubot! My name is (.*)`, it stores the contents of `(.*)` in an array called `match` that lives inside of an object called `msg`. When we want to retrieve that value, we use `fav = msg.match[0]` to grab the first value in that array, which in this case, is "Tim".
+
+ <details>
+ <summary>
+ **Wait, what does the `[0]` mean?** (click the arrow for the answer)
+ </summary>
+ `msg.match[0]` will grab the value corresponding to the first `(.*)` in the expression. If you use multiple `(.*)`s within one RegEx statement, you can assign each of the values to different variables like so: `var foo = msg.match[1]`, `var bar = msg.match[2]`.
+ </details>
+
+ Here's an example that uses two wildcards:
+
+ ```js
+ bot.respond(/add (.*) and (.*)/i, function(msg) {
+   var a;
+   var b;
+   a = parseInt(msg.match[0]);
+   b = parseInt(msg.match[1]);
+   c = a + b
+
+   return msg.reply(a + " plus " + b + " = " + c);
+ });
+
+ ```
+ ```
+ tim: @hubot add 3 and 4
+ hubot: 3 plus 4 = 7
+ ```
+
+ Here's another example that uses a switch statement to handle different cases:
+ ```js
+ bot.respond(/what is your favorite (.*)/, function(msg) {
+   var fav;
+   fav = msg.match[0];
+   console.log(fav);
+   switch (fav) {
+     case "food":
+       return msg.reply("I'm a robot--I don't eat food!");
+       break;
+     case "band":
+       return msg.reply("It's gotta be Daft Punk!");
+       break;
+     case "programming language":
+       return msg.reply("Javascript, of course!");
+       break;
+     default:
+       return msg.reply("I don't have a favorite " + fav + ". What's yours?");
+   }
+ });
+ ```
+ ```
+ tim: @hubot what is your favorite food?
+ hubot: @tim I'm a robot--I don't eat food!
+ tim @hubot what is your favorite color?
+ hubot: @tim I don't have a favorite color. What's yours?
+ ```
+
+#### Getting Fancy
+
+ **Regular Expressions**
+  You've probably noticed that we haven't used quotes around the phrases that Hubot is listening for, instead using `/` (e.g. `/What's your favorite food/`). What's that about?
+
+  Most programming languages allow you to search for text within text using something called **Regular Expressions**. Regular expressions, or "RegEx," allow you to listen for very specific patterns of text within a document, or in this case, a chat room.
+
+  For example, if you wanted to find the word "what" using a RegEx, you could use the following code: `\bwhat\b`. Here, "b" represents the boundaries of the word (i.e., it's beginning and end) and the "what" represents the word we are searching for.
+
+  Now, that's an advanced example. **For most of your bots, you can probably just enclose phrases between `/` marks**. If you would like to learn more about RegEx, check out the resources below:
+  - [RegexOne](http://regexone.com/) walks you through basic to advanced RegEx syntax. Check it out!
+  - [RegExr](http://regexr.com/) lets you test out your RegEx without having to constantly start and stop your bot.
+
+
+To wrap things up, here's one final example of an advanced Slackbot that uses a RegEx and which can respond to a number of different inputs:
+
+```js
+module.exports = function(robot) {
+    robot.respond(/is it a (weekend|holiday)\s?\?/i, function(msg){
+        var today = new Date();
+
+        msg.reply(today.getDay() === 0 || today.getDay() === 6 ? "YES" : "NO");
+    });
+
+    robot.hear(/i did it/i, function(msg){
+        msg.send("Congratulations! Good job!");
+    });
+
+    robot.respond(/are you there?/i, function(msg){
+        msg.reply('Yes, usually here, and listening.');
+    });
+
+    robot.respond(/convert \$(.*) to btc/i, function(res){
+        var usd = res.match[1];
+        res.reply('That is about ' + usd * 0.0024 + ' in BTC');
+    });
+
+}
+```
+
+Hopefully this gives you a sense of some different things that a Slackbot can do and maybe even gives you some ideas for a Slackbot you might want to build...
 
 >Note: Additional information on building and running Slackbots is available in the [Unit 1 Project Prompt](../../projects/unit1/project-01.md)
 
@@ -398,12 +640,11 @@ The following exercises are purely optional and provided as a bonus for instruct
 
 We have given you some starter code where we grab the latest bitcoin trading price. Open the [starter code](starter-code/currency-converter). Based on the US Dollar amount that a user inputs, we should print out the corresponding value in bitcoin based on the last trading price.
 
->Note:  Get familiar with [document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) and [parseFloat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)to complete this exercise. 
+>Note: We haven't covered DOM Manipulation yet, but students will need to get some familiarity with [document.getElementById()](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) or [parseFloat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat)to complete this exercise. Make sure to either hint at this or give them a short intro.
 
 Before writing any code, make sure to write down the pseudocode for the exercise.
 
 **Sample Starter Pseudocode**
-
 
 ```javascript
 
@@ -423,7 +664,7 @@ Before writing any code, make sure to write down the pseudocode for the exercise
 
 ##  Slackbot Part 2: Bitcoin Convertor Bot
 
-  The Slackbot should convert a requested amount of USD to the equivalent value of Bitcoin. You may use a constant, fixed price instead of the live rate of BTC price.
+  Build a Slackbot that can convert a requested amount in $USD to its equivalent value in Bitcoin. You may use a constant, fixed price instead of the live rate of BTC price.
 
   When the Slackbot participant enters "convert $X to btc", the bot should return the value in bitcoin.
 
