@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var x = 3;
+        console.log(x);
+        // var Test = function(){
+        //     console.log('Hello 2');
+        // }
+        console.log(x);
+
+        var Test = function(person){
+            var x = 2;
+            if (person !== undefined && person.greeting !== undefined && person.name !== undefined){
+            console.log(person.greeting + ' '+ person.name);
+            }else{
+                console.log('Your person is not valid!');
+            }
+            console.log(x);
+        }
+        var clients = [];
+        clients.push({ greeting: 'Hi', name: 'Max'});
+        clients.push({ greeting: 'Yo!', name: 'John'});
+         clients.push({ greeting: 'Bonjour', name: 'Jean'});
+         clients.push({ greeting: 'Ohayo', name: 'Yoko'});
+       
+        for(var i = 0; i < clients.length; i++){
+            Test(clients[i]);
+         }
+        
+        Test();
+        </script>
+</body>
+</html>
