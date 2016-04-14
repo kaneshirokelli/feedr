@@ -15,6 +15,14 @@ function canIDrive(){
     }
 };
 
+console.log(typeof(x));
+console.log(typeof(y));
+
+var y = {};
+var x = new Object();
+
+console.log(typeof(x));
+
 var btnDrive = document.getElementById('CanIDrive');
 
 btnDrive.addEventListener('click',canIDrive);

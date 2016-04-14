@@ -30,7 +30,30 @@
             Test(clients[i]);
          }
         
-        Test();
+        var sum = function(x,y,z){
+            var result = '';
+            if (typeof(x) === 'number' && typeof(y) === 'number' && typeof(z) === 'number'){
+                result =  x+y+z;
+            }else{
+                result = 'Enter 3 numbers as parameters!';
+            }
+            return result;
+        }
+        console.log(sum(4,3,3));
+        console.log(sum('a','b','c'));
+        
+        var a = 5;
+
+        function getScore () {
+        var b = 2;
+        var c = 3;
+           function add() {
+                return a + b * c;
+            }
+        return add();
+        }
+
+        console.log(getScore());
         </script>
 </body>
 </html>
