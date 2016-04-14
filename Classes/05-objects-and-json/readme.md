@@ -27,8 +27,6 @@
 - Execute functions and understand scope
 - Use control flow to manage the flow of information in our programs
 
->Note: Last class, we worked on creating and returning values from functions, global and local scopes! Check with students to make sure that everyone is comfortable with the materials covered in the last class.
-
 ---
 <a name = "opening"></a>
 
@@ -122,8 +120,6 @@ Ask the students to consider a couple of real-world scenarios, like this one:
 We start by identifying the nouns and noun phrases: some are going to be objects. There are also implicit nouns here: even though it's not mentioned, there's likely to be a shopping cart object.
 
 And when we consider the verbs in the scenario, we will find that some of them are associated with particular nouns, and those are excellent candidates for methods. Also consider verbs implicit in the scenario.
-
->*Note: Explain to students that an object is a similar thing, represented by a set of data -- its attributes -- that has functions associated with it to do certain things -- its methods. We have so far worked with objects as associative arrays, however we haven't used some of the superpowers we are given for JavaScript objects such as methods (object functions) and prototype.*
 
 
 #### Try it for yourself!
