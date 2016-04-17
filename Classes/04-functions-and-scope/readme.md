@@ -612,7 +612,7 @@ module.exports = function(robot) {
 
 Hopefully this gives you a sense of some different things that a Slackbot can do and maybe even gives you some ideas for a Slackbot you might want to build...
 
->Note: Additional information on building and running Slackbots is available in the [Unit 1 Project Prompt](../../projects/unit1/project-01.md)
+>Note: Additional information on building and running Slackbots is available in the [Unit 1 Project Prompt](../../Projects/unit1/project-01.md)
 
 ---
 
