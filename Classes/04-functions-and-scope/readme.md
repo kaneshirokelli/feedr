@@ -368,6 +368,8 @@ First, you'll need to [sign up for a free Heroku account](http://heroku.com).
 
 Next, [download the Heroku toolbelt](https://toolbelt.heroku.com/). This is a set of tools that will allow us to talk to Heroku's servers using the command line.
 
+This connects to heroku's instance of Git, not github. You may encounter problems if you create this directory under your github local repository.
+
 Speaking of which, it's now time to fire up the command line. In a terminal window, type the following commands, in order:
 
 **Create your slackbot directory:**
@@ -433,7 +435,7 @@ Now, we'll need to push up our bot to Heroku.
 
 **Turn on your bot**
 
-`$ heroku ps:scale web:1`
+`$ heroku ps:scale web=1`
 
 **Test your bot locally to make sure it's working:**
 
@@ -610,7 +612,7 @@ module.exports = function(robot) {
 
 Hopefully this gives you a sense of some different things that a Slackbot can do and maybe even gives you some ideas for a Slackbot you might want to build...
 
->Note: Additional information on building and running Slackbots is available in the [Unit 1 Project Prompt](../../projects/unit1/project-01.md)
+>Note: Additional information on building and running Slackbots is available in the [Unit 1 Project Prompt](../../Projects/unit1/project-01.md)
 
 ---
 
