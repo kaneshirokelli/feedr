@@ -32,7 +32,7 @@
 
 ###JM Notes
 >One of the coolest things to do with JavaScript is to change your page dynamically. You can move things around, add new things based on events, and validate data from your users before even making a server call.  Let me tell you a quick story about validation, STRY: SPG Validation for Xbox Live Client vs Server problem - John Mann 
-###End Note
+
 
 ---
 
@@ -62,7 +62,6 @@ We can manipulate the DOM in 3 different ways:
 
 ###JM Notes
 >Ask why this is least desirable? Ask what are other ways to include JavaScript?
-###End Note
 
 ```html
   <body onload="window.alert('welcome to my app!');">
@@ -83,7 +82,6 @@ We can manipulate the DOM in 3 different ways:
 
 ###JM Notes
 >Why is this the best way? Explain async and defer attributes on loading and race conditions (Story: image not loaded on tile before function call)
-###End Note
 
 
 **It is important to get used to falling in the habit of only doing DOM related manipulation only once our content has loaded.** This is required, as we can't manipulate something that has not yet been drawn in the browser. In plain JavaScript, we can usually wrap this in a 'window.onload' function.
@@ -302,7 +300,6 @@ Now let's use jQuery to refactor some JS code! You may either follow along as or
 
 ###JM Note
 >One thing to consider is the way you are including jQuery, keep in mind you should always use a minified version for production code. Also, debugging jQuery is just as easy as debugging JavaScript, you can even put a debugger break in jQuery to see what it is doing.
-###End Note
 
 Complete the [main.js](starter-code/jquery_exercise/main.js) app in the [jquery_exercise folder](starter-code/jquery_exercise).
 
@@ -323,7 +320,6 @@ Add the ability to complete tasks in the list. Your program must complete the fo
 
 ###JM Note
 >Why are so many sites using jQuery over plain JavaScript? When do you think you would use VanillaJS instead of jQuery?
-###End Note
 
 Ask students what was learned. Make sure the objectives have been met.
 * Summarize the difference between global and local scope.
