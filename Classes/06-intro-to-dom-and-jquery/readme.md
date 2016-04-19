@@ -108,7 +108,7 @@ Below are a few of the core interfaces to target existing elements in the DOM.
 
 ```html
 <body>
-  <div id="hello">Hello world</p>
+  <div id="hello">Hello world</div>
   <ul id="gaCampuses">
     <li>DC</li>
     <li>NY</li>
