@@ -143,7 +143,7 @@ Finally, we can set certain events to execute based on user interaction. A commo
 ```html
   <form>
     <input id="my-input" />
-    <input id="my-input-button" type="submit" value="Run button code"></submit>
+    <input id="my-input-button" type="submit" value="Run button code" />
   </form>
 ```
 
