@@ -81,7 +81,7 @@ We can manipulate the DOM in 3 different ways:
 3. Including the JavaScript file [at the footer] of our site/app.
 
 ###JM Notes
->Why is this the best way? Explain async and defer attributes on loading and race conditions (Story: image not loaded on tile before function call)
+>Why is this the best way? Explain async and defer attributes on loading and race conditions (Story: image not loaded on tile before function call) [Async vs Defer](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 
 
 **It is important to get used to falling in the habit of only doing DOM related manipulation only once our content has loaded.** This is required, as we can't manipulate something that has not yet been drawn in the browser. In plain JavaScript, we can usually wrap this in a 'window.onload' function.
