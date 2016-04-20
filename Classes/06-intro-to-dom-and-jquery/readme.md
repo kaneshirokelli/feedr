@@ -108,7 +108,7 @@ Below are a few of the core interfaces to target existing elements in the DOM.
 
 ```html
 <body>
-  <div id="hello">Hello world</p>
+  <div id="hello">Hello world</div>
   <ul id="gaCampuses">
     <li>DC</li>
     <li>NY</li>
@@ -143,7 +143,7 @@ Finally, we can set certain events to execute based on user interaction. A commo
 ```html
   <form>
     <input id="my-input" />
-    <input id="my-input-button" type="submit" value="Run button code"></submit>
+    <input id="my-input-button" type="submit" value="Run button code" />
   </form>
 ```
 
