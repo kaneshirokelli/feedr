@@ -12,7 +12,6 @@ You'll add the ability to complete tasks in the list. Your program must complete
 
 'use strict';
 
-var $ = require('jquery');
 
 $(function() {
   var yourName = prompt('What is your name?');

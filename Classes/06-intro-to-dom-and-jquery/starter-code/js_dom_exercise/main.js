@@ -14,11 +14,27 @@ window.onload = function() {
   var your_name = prompt("What is your name?"),
       button,
       thing_list;
-
+      document.getElementById('name').innerHTML = your_name;
+      var btn = document.getElementById('new-thing-button');
+      btn.onclick =  function(event){
+        event.preventDefault();
+        MyApp.add_to_list(document.getElementById('fav-list'));
+    }
 };
 
 MyApp = {};
 
 MyApp.add_to_list = function(list) {
-
+        var newItemElm  = document.getElementById('new-thing');
+        var newItem = newItemElm.value;
+        if (newItem !== ''){
+        var newLi = document.createElement('li');
+        newLi.innerHTML = newItem;
+        list.appendChild(newLi);
+        newItemElm.value = '';
+        newItemElm.focus();
+        }
+        else{
+          alert('enter something');
+        }
 }
