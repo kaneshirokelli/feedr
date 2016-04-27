@@ -15,12 +15,14 @@ window.onload = function() {
       button,
       thing_list;
       document.getElementById('name').innerHTML = your_name;
+};
+
       var btn = document.getElementById('new-thing-button');
       btn.onclick =  function(event){
+        debugger;
         event.preventDefault();
         MyApp.add_to_list(document.getElementById('fav-list'));
-    }
-};
+    };
 
 MyApp = {};
 
