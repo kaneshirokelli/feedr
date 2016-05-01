@@ -372,4 +372,4 @@ Review class objectives and the following questions:
 ### Before Next Class
 |   |   |
 |---|---|
-| **UPCOMING PROJECTS**  | [Project 2: Feedr](/projects/unit2) |
+| **UPCOMING PROJECTS**  | [Project 2: Feedr](/Projects/unit2) |
