@@ -110,26 +110,16 @@ __Additoinal UI interaction rules:__
 
 ### Getting Started
 
-Begin by "fork"ing this repository. You can do so by clicking the "Fork" icon on
-the top right of [this](https://github.com/GA-JS-Pilot/feedr) page. Once
-complete, clone the repository to your computer by running the following
-commands:
+Begin by copying these files to a new repo in your github.
 
-```
-cd ~/Sites/
-git clone https://github.com/<your-username-here>/feedr.git
-cd feedr
-```
+- Pull this repository down locally.
+- Copy only the project directory over to a new directory
+- initialize a local repo
+- add your files
+- create a NEW remote repo under your account
+- push your local to that new repo.
 
-You can then open Sublime Text and point it at the `~/Sites/feedr` directory and
-work on the below steps. As you accomplish a feature, be sure to commit it in
-Git with the following commands:
-
-```
-git add .
-git commit -m "A description of what was added"
-git push -u origin master
-```
+You should be familiar enough with github by now to be able to do this.
 
 Here are some sugestions on where to start:
 
