@@ -18,3 +18,6 @@ Welcome to JavaScript
 | Lesson 5 | [Objects and JSON](./Classes/05-objects-and-json/readme.md)
 | Lesson 6 | [Intro to Dom and jQuery](./Classes/06-intro-to-dom-and-jquery/readme.md)
 | Lesson 7 | [Dom and jQuery continued](./Classes/07-dom-and-jquery-continued/readme.md)
+| Lesson 8 | [Ajax and Apis](./Classes/08-ajax-and-apis/readme.md)
+| Lesson 9 | [Asynchronous Javascript and Callbacks](./Classes/09-asynchronous-javascript-and-callbacks/readme.md)
+| Lesson 10 | [Advanced Apis](./Classes/10-advanced-apis/readme.md)
